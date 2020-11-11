@@ -12,7 +12,6 @@ def diff():
         overpayment = diff_payment_total - principal 
         print(f"Month {current_rep}: payment is {diff_payment}")
         current_rep += 1
-       
     print()
     print(f"Overpayment = {overpayment}")
 
@@ -29,7 +28,6 @@ def annuity():
     elif  args1[0] == "--principal" and args2[0] == "--payment":
         months = math.ceil(math.log((payment / (payment - (i * principal))), (1 + i)))
         overpayment = payment * months - principal
-        
         if months == 1:
             print(f"It will take {months} month to repay this loan!")
         elif months < 12:
