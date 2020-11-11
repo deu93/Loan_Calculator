@@ -20,7 +20,6 @@ def annuity():
     global months
     global payment 
     global principal
-    
     if args1[0] == "--principal" and args2[0] == "--periods":
         payment = math.ceil(principal * ((i * math.pow(1 + i, months)) / (math.pow(1 + i, months) - 1)))
         overpayment = payment * months - principal
